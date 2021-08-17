@@ -1,0 +1,15 @@
+package com.example.demo;
+
+public class ProductList {
+	
+	
+	    private List<Product> pd;
+
+	    public ProductList() {
+	        employees = new ArrayList<>();
+	    }
+
+	    // standard constructor and getter/setter
+	}
+
+}

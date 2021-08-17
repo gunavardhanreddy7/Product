@@ -1,0 +1,29 @@
+package com.example.demo;
+
+import java.io.IOException;
+
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.web.client.RestClientException;
+
+public class ProductController {
+  
+	@Autowired
+	 LoadBalancerClient lb; 
+	
+	
+public String get() throws RestClientException, IOException {
+		
+		ServiceInstance serviceInstance=lb.choose("First-service");
+		
+		System.out.println(serviceInstance.getUri());
+		
+		String baseUrl=serviceInstance.getUri().toString();
+		
+		baseUrl=baseUrl+"/first/n";
+		
+		RestTemplate restTemplate = new RestTemplate();
+		String result = restTemplate.getForObject(baseUrl, String.class);
+		return result;
+	}
+}
+}

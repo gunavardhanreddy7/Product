@@ -1,0 +1,4 @@
+
+spring.application.name=Category
+server.port=8081
+eureka.client.serviceUrl.defaultZone=http://localhost:8090/eureka

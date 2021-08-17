@@ -1,0 +1,10 @@
+package com.example.demo;
+
+public class Product {
+	
+	private String cid;
+	private String pid;
+	private String pname;
+	private String pdesc;
+
+}

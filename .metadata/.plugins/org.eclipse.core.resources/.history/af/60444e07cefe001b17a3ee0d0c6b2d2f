@@ -1,0 +1,2 @@
+spring.application.name=Category
+server.port=8081
